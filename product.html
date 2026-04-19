@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product — NEW SHOW OFF THE BRAND MAN</title>
+    <meta name="description" content="Shop premium streetwear. View product details, select size, and add to cart.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="page-enter">
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo" style="color:var(--black)">NSOBM</a>
+            <ul class="navbar__menu">
+                <li><a href="index.html" class="navbar__link" style="color:var(--black)">Home</a></li>
+                <li><a href="shop.html" class="navbar__link" style="color:var(--black)">Shop</a></li>
+                <li><a href="about.html" class="navbar__link" style="color:var(--black)">About</a></li>
+                <li><a href="cart.html" class="navbar__link" style="color:var(--black)">Cart</a></li>
+            </ul>
+            <div class="navbar__icons">
+                <a href="cart.html" class="navbar__icon" style="color:var(--black)"><i
+                        class="fas fa-shopping-bag"></i><span class="navbar__cart-count" id="cartCount">0</span></a>
+                <div class="hamburger" onclick="toggleMobileNav()"><span style="background:var(--black)"></span><span
+                        style="background:var(--black)"></span><span style="background:var(--black)"></span></div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMobileNav()"></div>
+    <div class="mobile-nav" id="mobileNav">
+        <span class="mobile-nav__close" onclick="toggleMobileNav()"><i class="fas fa-times"></i></span>
+        <a href="index.html" class="mobile-nav__link">Home</a><a href="shop.html" class="mobile-nav__link">Shop</a><a
+            href="about.html" class="mobile-nav__link">About</a><a href="cart.html" class="mobile-nav__link">Cart</a>
+    </div>
+
+    <!-- Product Detail -->
+    <section class="section" id="productDetail">
+        <div class="container-fluid">
+            <div class="product-detail">
+                <div class="product-gallery">
+                    <div class="product-gallery__main"><img src="images/product-tshirt.png" alt="Product"
+                            id="pdpMainImg"></div>
+                    <div class="product-gallery__thumbs" id="pdpThumbs"></div>
+                </div>
+                <div class="product-info">
+                    <p class="product-info__brand">NEW SHOW OFF THE BRAND MAN</p>
+                    <h1 class="product-info__name" id="pdpName">Product Name</h1>
+                    <div class="product-info__price" id="pdpPrice">₹0</div>
+                    <div class="product-info__rating" id="pdpRating"></div>
+                    <p class="product-info__desc" id="pdpDesc"></p>
+                    <div class="size-selector">
+                        <div class="size-selector__title"><span>Select Size</span><a href="#" class="text-sm"
+                                style="color:var(--gray-400)">Size Guide</a></div>
+                        <div class="size-options" id="pdpSizes"></div>
+                    </div>
+                    <div class="product-info__actions">
+                        <button class="btn btn-primary btn-lg" id="pdpAddCart" style="flex:1"><i
+                                class="fas fa-shopping-bag"></i> Add to Cart</button>
+                        <button class="btn btn-accent btn-lg" id="pdpBuyNow">Buy Now</button>
+                    </div>
+                    <div class="product-info__details">
+                        <div class="detail-row"><span class="detail-row__label">Fabric</span><span
+                                class="detail-row__value" id="pdpFabric"></span></div>
+                        <div class="detail-row"><span class="detail-row__label">Fit</span><span
+                                class="detail-row__value" id="pdpFit"></span></div>
+                        <div class="detail-row"><span class="detail-row__label">Care</span><span
+                                class="detail-row__value">Machine wash cold</span></div>
+                        <div class="detail-row"><span class="detail-row__label">Origin</span><span
+                                class="detail-row__value">Made in India</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews -->
+            <div class="reviews">
+                <div class="reviews__header">
+                    <h2 class="heading-md">Customer Reviews</h2>
+                    <span class="text-sm">Based on verified purchases</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-card__header"><span class="review-card__author">Arjun K.</span><span
+                            class="review-card__date">2 weeks ago</span></div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">Absolutely fire fit! The fabric quality is next level. I'm 6'1, got an
+                        XL and the oversized look is perfect. Already ordered two more. NSOBM never misses. 🔥</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-card__header"><span class="review-card__author">Rahul M.</span><span
+                            class="review-card__date">1 month ago</span></div>
+                    <div class="review-card__stars">★★★★☆</div>
+                    <p class="review-card__text">Great quality for the price. The stitching is solid and the fabric
+                        feels premium. Would love more color options though. Definitely buying again.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-card__header"><span class="review-card__author">Vikram S.</span><span
+                            class="review-card__date">3 weeks ago</span></div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">This brand understands streetwear. The fit is exactly what I was
+                        looking for — not too loose, not too tight. Premium quality all the way.</p>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div style="margin-top:60px">
+                <h2 class="heading-md fade-up" style="margin-bottom:32px">You May Also Like</h2>
+                <div class="products-grid" id="relatedGrid"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">NEW SHOW OFF THE BRAND MAN</div>
+                    <p class="footer__desc">Premium streetwear for the bold and confident.</p>
+                    <div class="footer__social"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                                class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div>
+                </div>
+                <div>
+                    <h4 class="footer__title">Shop</h4>
+                    <div class="footer__links"><a href="shop.html" class="footer__link">New Arrivals</a><a
+                            href="shop.html" class="footer__link">Best Sellers</a></div>
+                </div>
+                <div>
+                    <h4 class="footer__title">Company</h4>
+                    <div class="footer__links"><a href="about.html" class="footer__link">About Us</a><a
+                            href="about.html" class="footer__link">Visit Store</a></div>
+                </div>
+                <div>
+                    <h4 class="footer__title">Help</h4>
+                    <div class="footer__links"><a href="#" class="footer__link">Contact Us</a><a href="#"
+                            class="footer__link">Size Guide</a></div>
+                </div>
+            </div>
+            <div class="footer__bottom">&copy; 2026 NEW SHOW OFF THE BRAND MAN. All rights reserved.</div>
+        </div>
+    </footer>
+    <div class="toast" id="toast"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>

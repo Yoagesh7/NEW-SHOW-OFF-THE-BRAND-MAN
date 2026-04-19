@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart — NEW SHOW OFF THE BRAND MAN</title>
+    <meta name="description" content="Your shopping cart — review items, update quantities, and proceed to checkout.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="page-enter">
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo" style="color:var(--black)">NSOBM</a>
+            <ul class="navbar__menu">
+                <li><a href="index.html" class="navbar__link" style="color:var(--black)">Home</a></li>
+                <li><a href="shop.html" class="navbar__link" style="color:var(--black)">Shop</a></li>
+                <li><a href="about.html" class="navbar__link" style="color:var(--black)">About</a></li>
+                <li><a href="cart.html" class="navbar__link active" style="color:var(--black)">Cart</a></li>
+            </ul>
+            <div class="navbar__icons">
+                <a href="cart.html" class="navbar__icon" style="color:var(--black)"><i
+                        class="fas fa-shopping-bag"></i><span class="navbar__cart-count" id="cartCount">0</span></a>
+                <div class="hamburger" onclick="toggleMobileNav()"><span style="background:var(--black)"></span><span
+                        style="background:var(--black)"></span><span style="background:var(--black)"></span></div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMobileNav()"></div>
+    <div class="mobile-nav" id="mobileNav">
+        <span class="mobile-nav__close" onclick="toggleMobileNav()"><i class="fas fa-times"></i></span>
+        <a href="index.html" class="mobile-nav__link">Home</a><a href="shop.html" class="mobile-nav__link">Shop</a><a
+            href="about.html" class="mobile-nav__link">About</a><a href="cart.html" class="mobile-nav__link">Cart</a>
+    </div>
+
+    <div class="page-header">
+        <div class="container-fluid">
+            <p class="text-xs">Home / Cart</p>
+            <h1 class="heading-lg">Shopping Cart</h1>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container-fluid">
+            <!-- Empty State -->
+            <div class="empty-state" id="cartEmpty" style="display:none">
+                <div class="empty-state__icon">🛒</div>
+                <h3 class="empty-state__title">Your cart is empty</h3>
+                <p class="empty-state__desc">Looks like you haven't added anything yet. Let's fix that.</p>
+                <a href="shop.html" class="btn btn-primary">Start Shopping</a>
+            </div>
+            <!-- Cart Content -->
+            <div class="grid cart-layout" id="cartContent">
+                <div id="cartItems"></div>
+                <div class="cart-summary" id="cartSummary"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">NEW SHOW OFF THE BRAND MAN</div>
+                    <p class="footer__desc">Premium streetwear for the bold and confident.</p>
+                </div>
+                <div>
+                    <h4 class="footer__title">Shop</h4>
+                    <div class="footer__links"><a href="shop.html" class="footer__link">New Arrivals</a><a
+                            href="shop.html" class="footer__link">Best Sellers</a></div>
+                </div>
+                <div>
+                    <h4 class="footer__title">Company</h4>
+                    <div class="footer__links"><a href="about.html" class="footer__link">About Us</a></div>
+                </div>
+                <div>
+                    <h4 class="footer__title">Help</h4>
+                    <div class="footer__links"><a href="#" class="footer__link">Contact Us</a><a href="#"
+                            class="footer__link">Returns</a></div>
+                </div>
+            </div>
+            <div class="footer__bottom">&copy; 2026 NEW SHOW OFF THE BRAND MAN. All rights reserved.</div>
+        </div>
+    </footer>
+    <div class="toast" id="toast"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — NEW SHOW OFF THE BRAND MAN</title>
+    <meta name="description"
+        content="Discover the story behind NEW SHOW OFF THE BRAND MAN. Confidence, style, identity — built for the bold.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="page-enter">
+    <nav class="navbar" id="navbar">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo">NSOBM</a>
+            <ul class="navbar__menu">
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="shop.html" class="navbar__link">Shop</a></li>
+                <li><a href="about.html" class="navbar__link active">About</a></li>
+                <li><a href="cart.html" class="navbar__link">Cart</a></li>
+            </ul>
+            <div class="navbar__icons">
+                <a href="cart.html" class="navbar__icon"><i class="fas fa-shopping-bag"></i><span
+                        class="navbar__cart-count" id="cartCount">0</span></a>
+                <div class="hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMobileNav()"></div>
+    <div class="mobile-nav" id="mobileNav">
+        <span class="mobile-nav__close" onclick="toggleMobileNav()"><i class="fas fa-times"></i></span>
+        <a href="index.html" class="mobile-nav__link">Home</a><a href="shop.html" class="mobile-nav__link">Shop</a><a
+            href="about.html" class="mobile-nav__link">About</a><a href="cart.html" class="mobile-nav__link">Cart</a>
+    </div>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="about-hero__bg"><img src="images/brand-lifestyle.png" alt="NSOBM Brand"></div>
+        <div class="about-hero__overlay"></div>
+        <div class="about-hero__content">
+            <p class="text-xs" style="color:var(--accent);margin-bottom:12px">Our Story</p>
+            <h1 class="heading-xl">Built for<br>the Bold</h1>
+        </div>
+    </section>
+
+    <!-- Brand Story -->
+    <section class="section">
+        <div class="container-fluid">
+            <div class="about-story">
+                <div class="about-story__img fade-up"><img src="images/hero-banner.png" alt="NSOBM Style"></div>
+                <div class="about-story__content fade-up">
+                    <p class="text-xs" style="color:var(--accent)">Who We Are</p>
+                    <h2 class="heading-lg">More Than a Brand.<br>A Movement.</h2>
+                    <p>NEW SHOW OFF THE BRAND MAN was born from the streets — where confidence meets style, where
+                        attitude meets fabric. We don't follow trends — we set them.</p>
+                    <p>Every piece in our collection is designed for the ones who own every room they walk into. From
+                        the cut of the fabric to the weight of the material, nothing is accidental. Premium isn't a
+                        price tag — it's an attitude.</p>
+                    <p>Founded with a single vision: to create streetwear that doesn't just look good — it makes you
+                        feel unstoppable. Because when you put on NSOBM, you're not just wearing clothes. You're wearing
+                        a statement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section section--gray">
+        <div class="container-fluid">
+            <div class="text-center fade-up" style="margin-bottom:48px">
+                <p class="text-xs">What Drives Us</p>
+                <h2 class="heading-lg">Our Values</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card fade-up">
+                    <div class="value-card__icon">🔥</div>
+                    <h3 class="value-card__title">Bold by Design</h3>
+                    <p class="value-card__desc">Every piece is crafted to make a statement. We don't do subtle — we do
+                        unforgettable.</p>
+                </div>
+                <div class="value-card fade-up">
+                    <div class="value-card__icon">💎</div>
+                    <h3 class="value-card__title">Premium Quality</h3>
+                    <p class="value-card__desc">Handpicked fabrics, precision stitching, and attention to every detail.
+                        Quality you can feel.</p>
+                </div>
+                <div class="value-card fade-up">
+                    <div class="value-card__icon">🌍</div>
+                    <h3 class="value-card__title">Street Culture</h3>
+                    <p class="value-card__desc">Rooted in urban culture and global street style. For those who live life
+                        on their own terms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit Our Store -->
+    <section class="section">
+        <div class="container-fluid">
+            <div class="store-section">
+                <div class="store-section__img fade-up"><img src="images/store-interior.png" alt="NSOBM Store"></div>
+                <div class="store-section__info fade-up">
+                    <p class="text-xs" style="color:var(--accent)">Retail Experience</p>
+                    <h3 class="heading-lg">Visit Our Store</h3>
+                    <p>Step into the world of NSOBM. Our flagship store is designed to give you the full brand
+                        experience — from the music to the lighting to the feel of every fabric on the rack.</p>
+                    <p class="address"><i class="fas fa-map-marker-alt"></i> &nbsp; 42, Fashion Street, Linking Road,
+                        Bandra West, Mumbai — 400050</p>
+                    <p><i class="fas fa-clock"></i> &nbsp; Mon - Sun: 10:00 AM - 9:00 PM</p>
+                    <p style="margin-top:8px"><i class="fas fa-phone"></i> &nbsp; +91 98765 43210</p>
+                    <div class="map-placeholder" style="margin-top:24px">
+                        <span><i class="fas fa-map"></i> &nbsp; Interactive Map Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram CTA -->
+    <section class="section section--dark text-center">
+        <div class="container fade-up">
+            <p class="text-xs" style="color:var(--accent)">Follow Us</p>
+            <h2 class="heading-lg" style="color:#fff;margin-bottom:16px">@newshowoffthebrandman</h2>
+            <p style="color:var(--gray-300);margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto">Join
+                50K+ people who show off their style. Tag us to get featured.</p>
+            <a href="https://instagram.com" target="_blank" class="btn btn-white"><i class="fab fa-instagram"></i>
+                Follow on Instagram</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">NEW SHOW OFF THE BRAND MAN</div>
+                    <p class="footer__desc">Premium streetwear for the bold and confident. Designed to make you stand
+                        out.</p>
+                    <div class="footer__social"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                                class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a
+                            href="#"><i class="fab fa-youtube"></i></a></div>
+                </div>
+                <div>
+                    <h4 class="footer__title">Shop</h4>
+                    <div class="footer__links"><a href="shop.html" class="footer__link">New Arrivals</a><a
+                            href="shop.html" class="footer__link">Best Sellers</a><a href="shop.html"
+                            class="footer__link">T-Shirts</a><a href="shop.html" class="footer__link">Oversized</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer__title">Company</h4>
+                    <div class="footer__links"><a href="about.html" class="footer__link">About Us</a><a
+                            href="about.html" class="footer__link">Our Story</a><a href="about.html"
+                            class="footer__link">Visit Store</a></div>
+                </div>
+                <div>
+                    <h4 class="footer__title">Help</h4>
+                    <div class="footer__links"><a href="#" class="footer__link">Contact Us</a><a href="#"
+                            class="footer__link">Shipping Info</a><a href="#" class="footer__link">Returns &
+                            Exchange</a><a href="#" class="footer__link">FAQ</a></div>
+                </div>
+            </div>
+            <div class="footer__bottom">&copy; 2026 NEW SHOW OFF THE BRAND MAN. All rights reserved. | Made with 🖤 for
+                the bold.</div>
+        </div>
+    </footer>
+    <div class="toast" id="toast"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>

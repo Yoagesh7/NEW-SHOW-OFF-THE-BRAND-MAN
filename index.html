@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW SHOW OFF THE BRAND MAN — Wear the Attitude</title>
+    <meta name="description"
+        content="Premium streetwear and fashion brand. Bold, confident, urban style for the modern man. Shop T-Shirts, Shirts, Pants, Oversized fits and more.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="page-enter">
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo">NSOBM</a>
+            <ul class="navbar__menu">
+                <li><a href="index.html" class="navbar__link active">Home</a></li>
+                <li><a href="shop.html" class="navbar__link">Shop</a></li>
+                <li><a href="about.html" class="navbar__link">About</a></li>
+                <li><a href="cart.html" class="navbar__link">Cart</a></li>
+            </ul>
+            <div class="navbar__icons">
+                <a href="cart.html" class="navbar__icon" id="cartIcon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="navbar__cart-count" id="cartCount">0</span>
+                </a>
+                <div class="hamburger" id="hamburger" onclick="toggleMobileNav()">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMobileNav()"></div>
+    <div class="mobile-nav" id="mobileNav">
+        <span class="mobile-nav__close" onclick="toggleMobileNav()"><i class="fas fa-times"></i></span>
+        <a href="index.html" class="mobile-nav__link">Home</a>
+        <a href="shop.html" class="mobile-nav__link">Shop</a>
+        <a href="about.html" class="mobile-nav__link">About</a>
+        <a href="cart.html" class="mobile-nav__link">Cart</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero__bg">
+            <img src="images/hero-banner.png" alt="NEW SHOW OFF THE BRAND MAN — Premium Streetwear">
+        </div>
+        <div class="hero__overlay"></div>
+
+        <!-- Side Labels -->
+        <div class="hero__side-label hero__side-label--left">EST. 2026</div>
+        <div class="hero__side-label hero__side-label--right">PREMIUM STREETWEAR</div>
+
+        <div class="hero__content-wrap">
+            <div class="hero__eyebrow fade-up">
+                <span class="hero__line"></span>
+                <span>New Collection 2026</span>
+                <span class="hero__line"></span>
+            </div>
+            <h1 class="hero__headline fade-up">WEAR THE<br><span class="hero__headline-accent">ATTITUDE.</span></h1>
+            <p class="hero__subtitle fade-up">Premium streetwear for those who define style, not follow it.</p>
+            <div class="hero__cta fade-up">
+                <a href="shop.html" class="btn btn-white btn-lg">Shop Collection</a>
+                <a href="#collections" class="btn btn-ghost btn-lg">Explore</a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="hero__scroll-indicator">
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Features Bar -->
+    <section class="features">
+        <div class="container-fluid">
+            <div class="features__grid">
+                <div class="feature-item fade-up">
+                    <div class="feature-item__icon"><i class="fas fa-truck-fast"></i></div>
+                    <div class="feature-item__title">Free Shipping</div>
+                    <div class="feature-item__desc">On orders above ₹999</div>
+                </div>
+                <div class="feature-item fade-up">
+                    <div class="feature-item__icon"><i class="fas fa-arrow-rotate-left"></i></div>
+                    <div class="feature-item__title">Easy Returns</div>
+                    <div class="feature-item__desc">7-day hassle free returns</div>
+                </div>
+                <div class="feature-item fade-up">
+                    <div class="feature-item__icon"><i class="fas fa-diamond"></i></div>
+                    <div class="feature-item__title">Premium Quality</div>
+                    <div class="feature-item__desc">Handpicked fabrics</div>
+                </div>
+                <div class="feature-item fade-up">
+                    <div class="feature-item__icon"><i class="fas fa-shield-halved"></i></div>
+                    <div class="feature-item__title">Secure Payment</div>
+                    <div class="feature-item__desc">100% secure checkout</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections -->
+    <section class="section" id="collections">
+        <div class="container-fluid">
+            <div class="collections__header text-center fade-up">
+                <p class="text-xs">Curated For You</p>
+                <h2 class="heading-lg">Featured Collections</h2>
+            </div>
+            <div class="grid grid-3" id="collectionsGrid">
+                <a href="shop.html" class="collection-card fade-up">
+                    <img src="images/product-tshirt.png" alt="New Arrivals">
+                    <div class="collection-card__overlay">
+                        <span class="badge badge-accent">New</span>
+                        <h3 class="collection-card__title">New Arrivals</h3>
+                        <p class="collection-card__count">24 Products</p>
+                    </div>
+                </a>
+                <a href="shop.html" class="collection-card fade-up">
+                    <img src="images/product-oversized.png" alt="Trending Now">
+                    <div class="collection-card__overlay">
+                        <span class="badge badge-accent">🔥 Hot</span>
+                        <h3 class="collection-card__title">Trending Now</h3>
+                        <p class="collection-card__count">18 Products</p>
+                    </div>
+                </a>
+                <a href="shop.html" class="collection-card fade-up">
+                    <img src="images/product-shirt.png" alt="Best Sellers">
+                    <div class="collection-card__overlay">
+                        <span class="badge badge-accent">⭐ Top</span>
+                        <h3 class="collection-card__title">Best Sellers</h3>
+                        <p class="collection-card__count">32 Products</p>
+                    </div>
+                </a>
+                <!-- New Collections -->
+                <a href="shop.html" class="collection-card fade-up">
+                    <img src="images/coll-summer.png" alt="Summer Essentials">
+                    <div class="collection-card__overlay">
+                        <span class="badge badge-accent">Summer</span>
+                        <h3 class="collection-card__title">Summer Essentials</h3>
+                        <p class="collection-card__count">12 Products</p>
+                    </div>
+                </a>
+                <a href="shop.html" class="collection-card fade-up">
+                    <img src="images/coll-acc.png" alt="Street Accessories">
+                    <div class="collection-card__overlay">
+                        <span class="badge badge-accent">Fresh</span>
+                        <h3 class="collection-card__title">Street Accessories</h3>
+                        <p class="collection-card__count">15 Products</p>
+                    </div>
+                </a>
+                <a href="shop.html" class="collection-card fade-up">
+                    <img src="images/coll-limit.png" alt="Limited Edition">
+                    <div class="collection-card__overlay">
+                        <span class="badge badge-dark">Limited</span>
+                        <h3 class="collection-card__title">Limited Drops</h3>
+                        <p class="collection-card__count">5 Products</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section section--gray">
+        <div class="container-fluid">
+            <div class="text-center fade-up" style="margin-bottom:48px">
+                <p class="text-xs">Browse By</p>
+                <h2 class="heading-lg">Shop Categories</h2>
+            </div>
+            <div class="grid categories-grid" id="categoriesGrid">
+                <a href="shop.html" class="category-item fade-up">
+                    <div class="category-item__img"><img src="images/cat_formal.png" alt="Formal"></div>
+                    <div class="category-item__name">Formal</div>
+                </a>
+                <a href="shop.html" class="category-item fade-up">
+                    <div class="category-item__img"><img src="images/cat_casual.png" alt="Casual"></div>
+                    <div class="category-item__name">Casual</div>
+                </a>
+                <a href="shop.html" class="category-item fade-up">
+                    <div class="category-item__img"><img src="images/cat_kids.png" alt="Kids"></div>
+                    <div class="category-item__name">Kids</div>
+                </a>
+                <a href="shop.html" class="category-item fade-up">
+                    <div class="category-item__img"><img src="images/prod_mens_tshirt.png" alt="Essentials"></div>
+                    <div class="category-item__name">Essentials</div>
+                </a>
+                <a href="shop.html" class="category-item fade-up">
+                    <div class="category-item__img"><img src="images/cat_accessories.png" alt="Accessories"></div>
+                    <div class="category-item__name">Accessories</div>
+                </a>
+                <a href="shop.html" class="category-item fade-up">
+                    <div class="category-item__img"><img src="images/prod_shoes.png" alt="Footwear"></div>
+                    <div class="category-item__name">Footwear</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Products -->
+    <section class="section">
+        <div class="container-fluid">
+            <div class="flex-between fade-up" style="margin-bottom:40px">
+                <div>
+                    <p class="text-xs">Don't Miss Out</p>
+                    <h2 class="heading-lg">Trending Now</h2>
+                </div>
+                <a href="shop.html" class="btn btn-outline btn-sm">View All</a>
+            </div>
+            <div class="products-grid" id="trendingGrid"></div>
+        </div>
+    </section>
+
+    <!-- Promo Banner (Offers) -->
+    <section class="section" style="padding:0">
+        <div class="container-fluid">
+            <div class="promo fade-up">
+                <div class="promo__bg"><img src="images/promo_sale.png" alt="Flash Sale"></div>
+                <div class="promo__overlay"
+                    style="background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%);"></div>
+                <div class="promo__content">
+                    <p class="text-xs" style="color:var(--accent)">Exclusive Offer</p>
+                    <h2 class="heading-lg" style="color:#fff">Streetwear Sale<br>Buy 2 Get 1 Free</h2>
+                    <p>Upgrade your wardrobe with premium menswear. Limited time offer on all tees, pants, and shirts.
+                    </p>
+                    <a href="shop.html" class="btn btn-accent">Claim Offer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="section">
+        <div class="container-fluid">
+            <div class="flex-between fade-up" style="margin-bottom:40px">
+                <div>
+                    <p class="text-xs">Just Landed</p>
+                    <h2 class="heading-lg">New Arrivals</h2>
+                </div>
+                <a href="shop.html" class="btn btn-outline btn-sm">View All</a>
+            </div>
+            <div class="products-grid" id="newArrivalsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Brand Story Teaser -->
+    <section class="section section--dark">
+        <div class="container-fluid">
+            <div class="about-story">
+                <div class="about-story__img fade-up">
+                    <img src="images/brand-lifestyle.png" alt="NSOBM Lifestyle">
+                </div>
+                <div class="about-story__content fade-up">
+                    <p class="text-xs" style="color:var(--accent)">Our Story</p>
+                    <h2 class="heading-lg" style="color:#fff">Built for the Bold</h2>
+                    <p style="color:var(--gray-300)">NEW SHOW OFF THE BRAND MAN isn't just a brand — it's a movement. We
+                        design for the ones who own every room they walk into. Confidence isn't worn — it's shown off.
+                    </p>
+                    <p style="color:var(--gray-300)">Every stitch, every cut, every fabric choice is intentional.
+                        Because premium isn't a price tag — it's an attitude.</p>
+                    <a href="about.html" class="btn btn-white" style="margin-top:20px">Discover More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="section section--gray">
+        <div class="container-fluid">
+            <div class="text-center fade-up" style="margin-bottom:48px">
+                <p class="text-xs">What They Say</p>
+                <h2 class="heading-lg">Customer Reviews</h2>
+            </div>
+            <div class="grid grid-2">
+                <div class="review-card fade-up"
+                    style="background:#fff; padding:32px; border-radius:12px; box-shadow:var(--shadow-sm);">
+                    <div style="display:flex; align-items:center; gap:16px; margin-bottom:16px;">
+                        <img src="images/avatar_1.png" alt="Alex M."
+                            style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                        <div>
+                            <h4 style="font-family:var(--font-display); font-weight:700; margin-bottom:4px;">Alex M.
+                            </h4>
+                            <div style="color:var(--accent); font-size:0.8rem;"><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                    <p style="color:var(--gray-400); font-size:0.95rem;">"The fit on these oversized tees is absolutely
+                        insane. Best premium menswear I've bought all year. Highly recommend NSOBM!"</p>
+                </div>
+                <div class="review-card fade-up"
+                    style="background:#fff; padding:32px; border-radius:12px; box-shadow:var(--shadow-sm);">
+                    <div style="display:flex; align-items:center; gap:16px; margin-bottom:16px;">
+                        <img src="images/avatar_2.png" alt="Jordan K."
+                            style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                        <div>
+                            <h4 style="font-family:var(--font-display); font-weight:700; margin-bottom:4px;">Jordan K.
+                            </h4>
+                            <div style="color:var(--accent); font-size:0.8rem;"><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star-half-alt"></i></div>
+                        </div>
+                    </div>
+                    <p style="color:var(--gray-400); font-size:0.95rem;">"Purchased the urban cargos and the material is
+                        top tier. Love the dark aesthetic and the attention to detail. Will buy again."</p>
+                </div>
+                <div class="review-card fade-up"
+                    style="background:#fff; padding:32px; border-radius:12px; box-shadow:var(--shadow-sm); margin-top:24px;">
+                    <div style="display:flex; align-items:center; gap:16px; margin-bottom:16px;">
+                        <img src="images/avatar_2.png" alt="Marcus T."
+                            style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                        <div>
+                            <h4 style="font-family:var(--font-display); font-weight:700; margin-bottom:4px;">Marcus T.
+                            </h4>
+                            <div style="color:var(--accent); font-size:0.8rem;"><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                    <p style="color:var(--gray-400); font-size:0.95rem;">"These tailored suits are unbelievable for the
+                        price. I wore it to an event and the quality had everyone asking if it was a high-end designer
+                        label."</p>
+                </div>
+                <div class="review-card fade-up"
+                    style="background:#fff; padding:32px; border-radius:12px; box-shadow:var(--shadow-sm); margin-top:24px;">
+                    <div style="display:flex; align-items:center; gap:16px; margin-bottom:16px;">
+                        <img src="images/avatar_1.png" alt="Eli R."
+                            style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                        <div>
+                            <h4 style="font-family:var(--font-display); font-weight:700; margin-bottom:4px;">Eli R.
+                            </h4>
+                            <div style="color:var(--accent); font-size:0.8rem;"><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                    <p style="color:var(--gray-400); font-size:0.95rem;">"The streetwear drops here never miss. I picked
+                        up the core shirt and the texture feels so premium. NSOBM is easily my new favorite brand."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" id="newsletter">
+        <div class="container-fluid">
+            <div class="newsletter__inner fade-up">
+                <p class="text-xs" style="color:var(--accent);margin-bottom:12px">Stay Updated</p>
+                <h2 class="newsletter__title heading-md">Join the Movement</h2>
+                <p class="newsletter__desc">Get early access to exclusive drops and the latest from the street.</p>
+                <form class="newsletter__form"
+                    onsubmit="event.preventDefault();showToast('Welcome to the Movement! 🔥')">
+                    <input type="email" class="newsletter__input" placeholder="Your email address" required>
+                    <button type="submit" class="newsletter__btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">NEW SHOW OFF THE BRAND MAN</div>
+                    <p class="footer__desc">Premium streetwear for the bold and confident. Designed to make you stand
+                        out, crafted to make you feel unstoppable.</p>
+                    <div class="footer__social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer__title">Shop</h4>
+                    <div class="footer__links">
+                        <a href="shop.html" class="footer__link">New Arrivals</a>
+                        <a href="shop.html" class="footer__link">Best Sellers</a>
+                        <a href="shop.html" class="footer__link">T-Shirts</a>
+                        <a href="shop.html" class="footer__link">Oversized</a>
+                        <a href="shop.html" class="footer__link">Pants</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer__title">Company</h4>
+                    <div class="footer__links">
+                        <a href="about.html" class="footer__link">About Us</a>
+                        <a href="about.html" class="footer__link">Our Story</a>
+                        <a href="about.html" class="footer__link">Visit Store</a>
+                        <a href="#" class="footer__link">Careers</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer__title">Help</h4>
+                    <div class="footer__links">
+                        <a href="#" class="footer__link">Contact Us</a>
+                        <a href="#" class="footer__link">Shipping Info</a>
+                        <a href="#" class="footer__link">Returns & Exchange</a>
+                        <a href="#" class="footer__link">FAQ</a>
+                        <a href="#" class="footer__link">Size Guide</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                &copy; 2026 NEW SHOW OFF THE BRAND MAN. All rights reserved. | Made with 🖤 for the bold.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

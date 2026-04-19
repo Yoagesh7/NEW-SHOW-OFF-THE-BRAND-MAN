@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All — NEW SHOW OFF THE BRAND MAN</title>
+    <meta name="description"
+        content="Shop premium streetwear — T-Shirts, Shirts, Pants, Oversized fits. Filter by size, price, category and color.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="page-enter">
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo" style="color:var(--black)">NSOBM</a>
+            <ul class="navbar__menu">
+                <li><a href="index.html" class="navbar__link" style="color:var(--black)">Home</a></li>
+                <li><a href="shop.html" class="navbar__link active" style="color:var(--black)">Shop</a></li>
+                <li><a href="about.html" class="navbar__link" style="color:var(--black)">About</a></li>
+                <li><a href="cart.html" class="navbar__link" style="color:var(--black)">Cart</a></li>
+            </ul>
+            <div class="navbar__icons">
+                <a href="cart.html" class="navbar__icon" style="color:var(--black)" id="cartIcon"><i
+                        class="fas fa-shopping-bag"></i><span class="navbar__cart-count" id="cartCount">0</span></a>
+                <div class="hamburger" id="hamburger" onclick="toggleMobileNav()"><span
+                        style="background:var(--black)"></span><span style="background:var(--black)"></span><span
+                        style="background:var(--black)"></span></div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMobileNav()"></div>
+    <div class="mobile-nav" id="mobileNav">
+        <span class="mobile-nav__close" onclick="toggleMobileNav()"><i class="fas fa-times"></i></span>
+        <a href="index.html" class="mobile-nav__link">Home</a>
+        <a href="shop.html" class="mobile-nav__link">Shop</a>
+        <a href="about.html" class="mobile-nav__link">About</a>
+        <a href="cart.html" class="mobile-nav__link">Cart</a>
+    </div>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container-fluid">
+            <p class="text-xs">Home / Shop</p>
+            <h1 class="heading-lg">Shop All</h1>
+        </div>
+    </div>
+
+    <!-- Shop Layout -->
+    <section class="section">
+        <div class="container-fluid">
+            <div class="shop-layout">
+                <!-- Filters -->
+                <aside class="filters" id="filtersPanel">
+                    <button class="btn btn-sm btn-outline btn-full" style="display:none;margin-bottom:20px"
+                        onclick="closeMobileFilters()">Close Filters</button>
+                    <div class="filter-group">
+                        <div class="filter-group__title" onclick="toggleFilter(this)">Category</div>
+                        <div class="filter-group__options">
+                            <label class="filter-option"><input type="checkbox" class="filter-cat" value="T-Shirts">
+                                T-Shirts</label>
+                            <label class="filter-option"><input type="checkbox" class="filter-cat" value="Shirts">
+                                Shirts</label>
+                            <label class="filter-option"><input type="checkbox" class="filter-cat" value="Pants">
+                                Pants</label>
+                            <label class="filter-option"><input type="checkbox" class="filter-cat" value="Oversized">
+                                Oversized</label>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <div class="filter-group__title" onclick="toggleFilter(this)">Size</div>
+                        <div class="filter-group__options">
+                            <label class="filter-option"><input type="checkbox" class="filter-size" value="S">
+                                Small</label>
+                            <label class="filter-option"><input type="checkbox" class="filter-size" value="M">
+                                Medium</label>
+                            <label class="filter-option"><input type="checkbox" class="filter-size" value="L">
+                                Large</label>
+                            <label class="filter-option"><input type="checkbox" class="filter-size" value="XL">
+                                X-Large</label>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <div class="filter-group__title" onclick="toggleFilter(this)">Color</div>
+                        <div class="filter-group__options">
+                            <div class="color-options">
+                                <div class="color-swatch" style="background:#0a0a0a" title="Black"></div>
+                                <div class="color-swatch" style="background:#fff;border:1px solid #ddd" title="White">
+                                </div>
+                                <div class="color-swatch" style="background:#808080" title="Gray"></div>
+                                <div class="color-swatch" style="background:#2c3e50" title="Navy"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <div class="filter-group__title" onclick="toggleFilter(this)">Price Range</div>
+                        <div class="filter-group__options">
+                            <div class="price-range">
+                                <input type="number" placeholder="₹ Min" min="0">
+                                <span>—</span>
+                                <input type="number" placeholder="₹ Max" min="0">
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <!-- Products -->
+                <div>
+                    <div class="shop-toolbar">
+                        <span id="shopCount" class="shop-toolbar__count">8 products</span>
+                        <div class="flex gap-sm">
+                            <button class="btn btn-sm btn-outline" style="display:none" id="mobileFilterBtn"
+                                onclick="openMobileFilters()"><i class="fas fa-filter"></i> Filters</button>
+                            <select id="shopSort">
+                                <option value="default">Sort by: Default</option>
+                                <option value="low">Price: Low to High</option>
+                                <option value="high">Price: High to Low</option>
+                                <option value="newest">Newest First</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="products-grid" id="shopProductsGrid"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">NEW SHOW OFF THE BRAND MAN</div>
+                    <p class="footer__desc">Premium streetwear for the bold and confident.</p>
+                    <div class="footer__social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer__title">Shop</h4>
+                    <div class="footer__links"><a href="shop.html" class="footer__link">New Arrivals</a><a
+                            href="shop.html" class="footer__link">Best Sellers</a><a href="shop.html"
+                            class="footer__link">T-Shirts</a></div>
+                </div>
+                <div>
+                    <h4 class="footer__title">Company</h4>
+                    <div class="footer__links"><a href="about.html" class="footer__link">About Us</a><a
+                            href="about.html" class="footer__link">Our Story</a></div>
+                </div>
+                <div>
+                    <h4 class="footer__title">Help</h4>
+                    <div class="footer__links"><a href="#" class="footer__link">Contact Us</a><a href="#"
+                            class="footer__link">Shipping Info</a><a href="#" class="footer__link">Returns</a></div>
+                </div>
+            </div>
+            <div class="footer__bottom">&copy; 2026 NEW SHOW OFF THE BRAND MAN. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+    <script src="main.js"></script>
+    <script>
+        // Show mobile filter button on mobile
+        if (window.innerWidth <= 1024) { const b = document.getElementById('mobileFilterBtn'); if (b) b.style.display = 'inline-flex'; const c = document.querySelector('.filters button'); if (c) c.style.display = 'block'; }
+    </script>
+</body>
+
+</html>
