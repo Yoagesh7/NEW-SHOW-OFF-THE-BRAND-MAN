@@ -184,6 +184,24 @@ h6 {
   margin: 0 auto;
 }
 
+@media (max-width: 1024px) {
+  .container-fluid {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-fluid {
+    padding: 0 16px;
+  }
+}
+
 .section {
   padding: 120px 0
 }
@@ -1024,6 +1042,12 @@ h6 {
   z-index: 1;
   padding: 80px 60px;
   max-width: 600px
+}
+
+@media (max-width: 768px) {
+  .promo__content {
+    padding: 40px 20px
+  }
 }
 
 .promo__content .text-xs {
